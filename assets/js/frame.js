@@ -23,7 +23,7 @@ function loading() {
 
 function onChangeEvent() {
     loading();
-    var user_id = document.getElementById('user_id').value;
+    var user_id = document.getElementById('user-id').value;
     var file_data = $('#fileToUpload').prop('files')[0];
     var type = file_data.type;
     var match = ["image/png", "image/jpeg", "image/jpg"];
@@ -41,6 +41,7 @@ function onChangeEvent() {
             data: form_data,
             type: 'post',
             success: function(res) {
+                console.log(res);
 
                 if (res == 'upload ok') {
                     window.location.href = chooseLink + 'frame.step4.html';
