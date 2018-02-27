@@ -80,7 +80,11 @@ function silderZoom() {
     changeImgScale();
     mySlider.on('slide', changeImgScale);
     mySlider.on('slideStop', changeImgScale);
+    mySlider.on('touch', disableScroll);
 };
+function disableScroll(){
+
+}
 var _DRAGGGING_STARTED = 0;
     var _LAST_MOUSEMOVE_POSITION = {
         x: null,
@@ -127,11 +131,11 @@ function dragAction() {
         /* Image should be loaded before it can be dragged */
 
 
-        if ((_IMAGE_LOADED == 1) && (_DRAGGGING_STARTED == 0)) {
+        if ((_IMAGE_LOADED == 1) && (_DRAGGGING_STARTED == 1)) {
             _ZOOM = $("#zoom-slider").slider('getValue');
             _IMAGE_WIDTH = $("#zoomImg").width() * _ZOOM;
             _IMAGE_HEIGHT = $("#zoomImg").height() * _ZOOM;
-            _DRAGGGING_STARTED = 1;
+            _DRAGGGING_STARTED = 2;
 
             /* Save mouse position */
             _LAST_MOUSE_POSITION = {
@@ -157,7 +161,7 @@ function dragAction() {
             y: event.pageY - _DIV_OFFSET.top
         };
 
-        if (_DRAGGGING_STARTED == 1 && _LAST_MOUSE_POSITION.x != current_mouse_position.x && _LAST_MOUSE_POSITION.y != current_mouse_position.y) {
+        if (_DRAGGGING_STARTED == 2 && _LAST_MOUSE_POSITION.x != current_mouse_position.x && _LAST_MOUSE_POSITION.y != current_mouse_position.y) {
 
             var change_x = (current_mouse_position.x - _LAST_MOUSE_POSITION.x) * _ZOOM;
             var change_y = (current_mouse_position.y - _LAST_MOUSE_POSITION.y) * _ZOOM;
@@ -299,7 +303,11 @@ function ShowWelcome() {
         img.src = link_effect_pic + 'original.png';
         // document.getElementById('zoomImg').src = link_effect_pic + 'original.png';
         document.getElementById('image-container').appendChild(img);
-        silderZoom();
+        $("#zoomImg").one('load',function() {
+            // fire when image loads
+            silderZoom();
+        });
+
 
 
 
