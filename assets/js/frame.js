@@ -6,7 +6,7 @@ var server = 'local';
 var appID = appVotingBeauty;
 
 var linkLocal = 'http://localhost:8888/estee/';
-var linkABTech = 'http://voting.abtech.vn/estee/';
+var linkABTech = 'http://voting.abtech.vn/';
 var chooseLink = '';
 
 if (server == 'local') {
@@ -341,4 +341,26 @@ function changeImage(id) {
         var bendedImageSrc = $("#" + id).attr("src");
         $("#zoomImg").attr("src", bendedImageSrc);
     }
+}
+
+function sharefbimage() {
+    FB.init({appId: appID, status: true, cookie: true});
+    FB.ui(
+        {
+            method: `share`,
+            name: 'Facebook Dialogs',
+            href: $(location).attr('href'),
+            link: 'https://developers.facebook.com/docs/dialogs/',
+            picture: 'your image url',
+            caption: 'Ishelf Book',
+            description: 'your description'
+        },
+        function (response) {
+            if (response && response.post_id) {
+                alert('success');
+            } else {
+                alert('error');
+            }
+        }
+    );
 }
