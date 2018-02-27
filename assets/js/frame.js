@@ -58,10 +58,11 @@ function onChangeEvent() {
 }
 
 function silderZoom() {
+    var minsize = 350/$("#zoomImg").height();
     var mySlider = $("#zoom-slider").slider({
         value: 1,
         step: 0.01,
-        min: 0.5,
+        min: minsize,
         max: 2,
         orientation: 'vertical',
         tooltip: 'hide'
