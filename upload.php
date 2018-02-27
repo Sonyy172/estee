@@ -6,7 +6,7 @@ if (isset($_POST) && isset($_FILES['file'])) {
     $directory_user = 'photos/' . $_POST["user_id"];
     if (!file_exists($directory_user)) {
         mkdir($directory_user, 0777, true);
-        die('thu muc khong ton tai, tao thu muc');
+        // die('thu muc khong ton tai, tao thu muc');
     }
 
     $target_dir = $directory_user;
