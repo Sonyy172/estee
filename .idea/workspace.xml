@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7bbe212-15b4-46f2-a952-a9c227d5df71" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/index2.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/assets/js/frame.js" afterPath="$PROJECT_DIR$/assets/js/frame.js" />
-      <change beforePath="$PROJECT_DIR$/assets/js/loginFB.js" afterPath="$PROJECT_DIR$/assets/js/loginFB.js" />
       <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change beforePath="$PROJECT_DIR$/photos/1787283534908724/final.png" afterPath="$PROJECT_DIR$/photos/1787283534908724/final.png" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,12 +15,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="1052" column="25" lean-forward="false" selection-start-line="1052" selection-start-column="0" selection-end-line="1053" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="372">
+              <caret line="690" column="31" lean-forward="false" selection-start-line="690" selection-start-column="31" selection-end-line="690" selection-end-column="31" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -45,21 +44,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="frame.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="frame.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/frame.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="271" column="142" lean-forward="true" selection-start-line="271" selection-start-column="142" selection-end-line="271" selection-end-column="142" />
+            <state relative-caret-position="43">
+              <caret line="271" column="142" lean-forward="false" selection-start-line="271" selection-start-column="142" selection-end-line="271" selection-end-column="142" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loginFB.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/loginFB.js">
+      <file leaf-file-name="frame.step2.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frame.step2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-45">
-              <caret line="33" column="27" lean-forward="true" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+            <state relative-caret-position="209">
+              <caret line="361" column="84" lean-forward="true" selection-start-line="361" selection-start-column="84" selection-end-line="361" selection-end-column="84" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="frame.step4.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frame.step4.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="418" column="52" lean-forward="false" selection-start-line="418" selection-start-column="52" selection-end-line="418" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -74,9 +83,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/assets/js/loginFB.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/assets/js/frame.js" />
         <option value="$PROJECT_DIR$/index2.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -113,17 +122,6 @@
             <path>
               <item name="estee" type="b2602c69:ProjectViewProjectNode" />
               <item name="estee" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="estee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="estee" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="estee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="estee" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -164,18 +162,18 @@
       <option name="presentableId" value="Default" />
       <updated>1519696589048</updated>
       <workItem from="1519696590347" duration="368000" />
-      <workItem from="1519736496777" duration="1259000" />
+      <workItem from="1519736496777" duration="2945000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1627000" />
+    <option name="totallyTimeSpent" value="3313000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="752" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -210,7 +208,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11815">
           <caret line="695" column="5" lean-forward="true" selection-start-line="695" selection-start-column="5" selection-end-line="695" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -230,14 +230,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/loginFB.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-45">
-          <caret line="33" column="27" lean-forward="true" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frame.step1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6133">
@@ -246,10 +238,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/assets/js/loginFB.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="1052" column="25" lean-forward="false" selection-start-line="1052" selection-start-column="0" selection-end-line="1053" selection-end-column="0" />
+        <state relative-caret-position="231">
+          <caret line="63" column="7" lean-forward="true" selection-start-line="63" selection-start-column="7" selection-end-line="63" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame.step5.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="618">
+          <caret line="383" column="45" lean-forward="false" selection-start-line="383" selection-start-column="45" selection-end-line="383" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame.step4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="418" column="52" lean-forward="false" selection-start-line="418" selection-start-column="52" selection-end-line="418" selection-end-column="52" />
           <folding />
         </state>
       </provider>
@@ -271,9 +279,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/frame.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="271" column="142" lean-forward="true" selection-start-line="271" selection-start-column="142" selection-end-line="271" selection-end-column="142" />
+        <state relative-caret-position="43">
+          <caret line="271" column="142" lean-forward="false" selection-start-line="271" selection-start-column="142" selection-end-line="271" selection-end-column="142" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame.step2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="361" column="84" lean-forward="true" selection-start-line="361" selection-start-column="84" selection-end-line="361" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="690" column="31" lean-forward="false" selection-start-line="690" selection-start-column="31" selection-end-line="690" selection-end-column="31" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
