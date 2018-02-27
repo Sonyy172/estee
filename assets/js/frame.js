@@ -58,7 +58,7 @@ function onChangeEvent() {
 }
 
 function silderZoom() {
-    var minsize = 350 / $("#zoomImg").height();
+    var minsize = 350/$("#zoomImg").height();
     var mySlider = $("#zoom-slider").slider({
         value: 1,
         step: 0.01,
@@ -83,7 +83,6 @@ function silderZoom() {
     changeImgScale();
     mySlider.on('slide', changeImgScale);
     mySlider.on('slideStop', changeImgScale);
-    mySlider.on('touch', disableScroll);
 };
 
 function disableScroll() {
@@ -269,7 +268,7 @@ function statusChangeCallback(response) {
 // [3] Yêu cầu đăng nhập FB
 function RequestLoginFB() {
     window.location =
-        'http://graph.facebook.com/oauth/authorize?client_id=' + appID + '&scope=public_profile,email,user_likes&redirect_uri=' + chooseLink + 'index2.html';
+        'http://graph.facebook.com/oauth/authorize?client_id=' + appID + '&scope=public_profile,email,user_likes&redirect_uri=' + chooseLink + 'frame.step2.html';
 }
 
 // [4] Hiển thị nút đăng nhập
@@ -345,31 +344,23 @@ function changeImage(id) {
 }
 
 function sharefbimage() {
-    var user_id = document.getElementById('user-id').innerHTML;
-    FB.ui({
-        method: 'share',
-        display: 'popup',
-        href: 'https://developers.facebook.com/docs/',
-    }, function (response) {
-        console.log('shared');
-    });
-    // FB.init({appId: appID, status: true, cookie: true});
-    // FB.ui(
-    //     {
-    //         method: 'share',
-    //         name: 'Facebook Dialogs',
-    //         href: 'voting.abtech.vn',
-    //         link: 'https://developers.facebook.com/docs/dialogs/',
-    //         picture: chooseLink + 'photos/' + user_id + '/frame.png',
-    //         caption: 'Ishelf Book',
-    //         description: 'your description'
-    //     },
-    //     function (response) {
-    //         if (response && response.post_id) {
-    //             console.log('share thanh cong');
-    //         } else {
-    //             console.log('share khong thanh cong');
-    //         }
-    //     }
-    // );
+    FB.init({appId: appID, status: true, cookie: true});
+    FB.ui(
+        {
+            method: `share`,
+            name: 'Facebook Dialogs',
+            href: $(location).attr('href'),
+            link: 'https://developers.facebook.com/docs/dialogs/',
+            picture: 'your image url',
+            caption: 'Ishelf Book',
+            description: 'your description'
+        },
+        function (response) {
+            if (response && response.post_id) {
+                alert('success');
+            } else {
+                alert('error');
+            }
+        }
+    );
 }
