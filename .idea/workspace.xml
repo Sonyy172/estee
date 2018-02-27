@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c7bbe212-15b4-46f2-a952-a9c227d5df71" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change beforePath="$PROJECT_DIR$/photos/1787283534908724/final.png" afterPath="$PROJECT_DIR$/photos/1787283534908724/final.png" />
+      <change beforePath="$PROJECT_DIR$/frame.step2.html" afterPath="$PROJECT_DIR$/frame.step2.html" />
+      <change beforePath="$PROJECT_DIR$/frame.step4.html" afterPath="$PROJECT_DIR$/frame.step4.html" />
+      <change beforePath="$PROJECT_DIR$/frame.step5.html" afterPath="$PROJECT_DIR$/frame.step5.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="690" column="31" lean-forward="false" selection-start-line="690" selection-start-column="31" selection-end-line="690" selection-end-column="31" />
+            <state relative-caret-position="440">
+              <caret line="694" column="41" lean-forward="true" selection-start-line="694" selection-start-column="41" selection-end-line="694" selection-end-column="41" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -47,9 +48,11 @@
       <file leaf-file-name="frame.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/frame.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="43">
-              <caret line="271" column="142" lean-forward="false" selection-start-line="271" selection-start-column="142" selection-end-line="271" selection-end-column="142" />
-              <folding />
+            <state relative-caret-position="26">
+              <caret line="270" column="142" lean-forward="false" selection-start-line="270" selection-start-column="142" selection-end-line="270" selection-end-column="142" />
+              <folding>
+                <marker date="1519752833000" expanded="true" signature="11094:11097" ph="//..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -57,18 +60,31 @@
       <file leaf-file-name="frame.step2.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frame.step2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="361" column="84" lean-forward="true" selection-start-line="361" selection-start-column="84" selection-end-line="361" selection-end-column="84" />
+            <state relative-caret-position="301">
+              <caret line="378" column="14" lean-forward="false" selection-start-line="378" selection-start-column="14" selection-end-line="378" selection-end-column="14" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="frame.step5.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frame.step5.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="335">
+              <caret line="367" column="36" lean-forward="true" selection-start-line="367" selection-start-column="36" selection-end-line="367" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="frame.step4.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="frame.step4.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frame.step4.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="418" column="52" lean-forward="false" selection-start-line="418" selection-start-column="52" selection-end-line="418" selection-end-column="52" />
+            <state relative-caret-position="371">
+              <caret line="416" column="48" lean-forward="false" selection-start-line="416" selection-start-column="48" selection-end-line="416" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -86,6 +102,9 @@
         <option value="$PROJECT_DIR$/assets/js/frame.js" />
         <option value="$PROJECT_DIR$/index2.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/frame.step2.html" />
+        <option value="$PROJECT_DIR$/frame.step5.html" />
+        <option value="$PROJECT_DIR$/frame.step4.html" />
       </list>
     </option>
   </component>
@@ -162,12 +181,12 @@
       <option name="presentableId" value="Default" />
       <updated>1519696589048</updated>
       <workItem from="1519696590347" duration="368000" />
-      <workItem from="1519736496777" duration="2945000" />
+      <workItem from="1519736496777" duration="3537000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3313000" />
+    <option name="totallyTimeSpent" value="3905000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="752" extended-state="6" />
@@ -246,22 +265,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frame.step5.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="383" column="45" lean-forward="false" selection-start-line="383" selection-start-column="45" selection-end-line="383" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame.step4.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="418" column="52" lean-forward="false" selection-start-line="418" selection-start-column="52" selection-end-line="418" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -279,27 +282,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/frame.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="271" column="142" lean-forward="false" selection-start-line="271" selection-start-column="142" selection-end-line="271" selection-end-column="142" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame.step2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="361" column="84" lean-forward="true" selection-start-line="361" selection-start-column="84" selection-end-line="361" selection-end-column="84" />
-          <folding />
+        <state relative-caret-position="26">
+          <caret line="270" column="142" lean-forward="false" selection-start-line="270" selection-start-column="142" selection-end-line="270" selection-end-column="142" />
+          <folding>
+            <marker date="1519752833000" expanded="true" signature="11094:11097" ph="//..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="690" column="31" lean-forward="false" selection-start-line="690" selection-start-column="31" selection-end-line="690" selection-end-column="31" />
+        <state relative-caret-position="440">
+          <caret line="694" column="41" lean-forward="true" selection-start-line="694" selection-start-column="41" selection-end-line="694" selection-end-column="41" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame.step2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="378" column="14" lean-forward="false" selection-start-line="378" selection-start-column="14" selection-end-line="378" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame.step5.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="367" column="36" lean-forward="true" selection-start-line="367" selection-start-column="36" selection-end-line="367" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame.step4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="416" column="48" lean-forward="false" selection-start-line="416" selection-start-column="48" selection-end-line="416" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
