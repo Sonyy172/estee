@@ -33,7 +33,7 @@ function statusChangeCallback(response) {
 // [3] Yêu cầu đăng nhập FB
 function RequestLoginFB() {
     window.location =
-        'http://graph.facebook.com/oauth/authorize?client_id=2041159069433896&scope=public_profile,email,user_likes&redirect_uri=http://localhost:8888/estee/';
+        'http://graph.facebook.com/oauth/authorize?client_id=2041159069433896&scope=public_profile,email,user_likes&redirect_uri=http://localhost:8888/estee/index2.html';
 }
 
 // [4] Hiển thị nút đăng nhập
