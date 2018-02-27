@@ -26,6 +26,7 @@ function onChangeEvent() {
     var user_id = document.getElementById('user-id').value;
     var file_data = $('#fileToUpload').prop('files')[0];
     var type = file_data.type;
+    // console.log(type);
     var match = ["image/png", "image/jpeg", "image/jpg"];
     if (type == match[0] || type == match[1] || type == match[2]) {
         var form_data = new FormData();
@@ -41,6 +42,7 @@ function onChangeEvent() {
             data: form_data,
             type: 'post',
             success: function (res) {
+                console.log('Response from upload.php');
                 console.log(res);
 
                 if (res == 'upload ok') {
@@ -59,8 +61,8 @@ function silderZoom() {
     var mySlider = $("#zoom-slider").slider({
         value: 1,
         step: 0.01,
-        min: 0.8,
-        max: 3,
+        min: 0.5,
+        max: 2,
         orientation: 'vertical',
         tooltip: 'hide'
     });
@@ -221,6 +223,7 @@ function saveCanvas2ImageOnServer() {
             data: form_data,
             type: 'post',
             success: function (res) {
+                console.log(res);
                 if (res == 'save image ok') {
                     window.location.href = chooseLink + 'frame.step5.html';
                 }
@@ -287,7 +290,7 @@ function ShowWelcome() {
         var public_profile_link = "https://www.facebook.com/app_scoped_user_id/" + id;
         var picture = "http://graph.facebook.com/" + id + "/picture?type=large";
 
-
+        document.getElementById('user-id').innerHTML = id;
         document.getElementById('user-id').value = id;
         document.getElementById('name-user').innerHTML = name;
         document.getElementById('picture-user').src = picture;

@@ -7,13 +7,14 @@ if (isset($_POST) && isset($_FILES['file'])) {
     if (!file_exists($directory_user)) {
         mkdir($directory_user, 0777, true);
         // die('thu muc khong ton tai, tao thu muc');
-    } 
+    }
     $target_dir = $directory_user;
 //    $target_file = $target_dir . '/original.png';
     $user_id = $_POST["user_id"];
 
     $duoi = explode('.', $_FILES['file']['name']); // tách chuỗi khi gặp dấu .
     $duoi = $duoi[(count($duoi) - 1)];//lấy ra đuôi file
+    $duoi = strtolower($duoi);
     //Kiểm tra xem có phải file ảnh không
     if ($duoi === 'jpg' || $duoi === 'png') {
         //tiến hành upload
@@ -25,7 +26,7 @@ if (isset($_POST) && isset($_FILES['file'])) {
             $link_summer = summer($user_id, $duoi);
             $link_vintage = vintage($user_id, $duoi);
             $link_fresh_blue = fresh_blue($user_id, $duoi);
-           $links = json_encode(array('winter' => $link_winter, 'summer' => $link_summer, 'vintage' => $link_vintage, 'fresh_blue' => $link_fresh_blue));
+            $links = json_encode(array('winter' => $link_winter, 'summer' => $link_summer, 'vintage' => $link_vintage, 'fresh_blue' => $link_fresh_blue));
             // die($links);
             die('upload ok');
 
@@ -34,7 +35,8 @@ if (isset($_POST) && isset($_FILES['file'])) {
 
         }
     } else { //nếu k phải file ảnh
-        die('Chỉ được upload ảnh'); //in ra thông báo
+        die($duoi);
+//        die('Chỉ được upload ảnh'); //in ra thông báo
 
     }
 } else {
