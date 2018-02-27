@@ -268,7 +268,7 @@ function statusChangeCallback(response) {
 // [3] Yêu cầu đăng nhập FB
 function RequestLoginFB() {
     window.location =
-        'http://graph.facebook.com/oauth/authorize?client_id=' + appID + '&scope=public_profile,email,user_likes&redirect_uri=' + chooseLink + 'frame.step2.html';
+        'http://graph.facebook.com/oauth/authorize?client_id=' + appID + '&scope=public_profile,email,user_likes&redirect_uri=' + chooseLink + 'index2.html';
 }
 
 // [4] Hiển thị nút đăng nhập
