@@ -6,4 +6,4 @@ $img = str_replace(' ', '+', $img);
 $fileData = base64_decode($img);
 $fileName = 'photos/' . $user_id . '/final.png';
 file_put_contents($fileName, $fileData);
-die('save image ok' . $user_id);
+die('save image ok');

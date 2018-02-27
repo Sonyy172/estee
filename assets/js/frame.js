@@ -344,23 +344,31 @@ function changeImage(id) {
 }
 
 function sharefbimage() {
-    FB.init({appId: appID, status: true, cookie: true});
-    FB.ui(
-        {
-            method: `share`,
-            name: 'Facebook Dialogs',
-            href: $(location).attr('href'),
-            link: 'https://developers.facebook.com/docs/dialogs/',
-            picture: 'your image url',
-            caption: 'Ishelf Book',
-            description: 'your description'
-        },
-        function (response) {
-            if (response && response.post_id) {
-                alert('success');
-            } else {
-                alert('error');
-            }
-        }
-    );
+    var user_id = document.getElementById('user-id').innerHTML;
+    FB.ui({
+        method: 'share',
+        display: 'popup',
+        href: 'https://developers.facebook.com/docs/',
+    }, function (response) {
+        console.log('shared');
+    });
+    // FB.init({appId: appID, status: true, cookie: true});
+    // FB.ui(
+    //     {
+    //         method: 'share',
+    //         name: 'Facebook Dialogs',
+    //         href: 'voting.abtech.vn',
+    //         link: 'https://developers.facebook.com/docs/dialogs/',
+    //         picture: chooseLink + 'photos/' + user_id + '/frame.png',
+    //         caption: 'Ishelf Book',
+    //         description: 'your description'
+    //     },
+    //     function (response) {
+    //         if (response && response.post_id) {
+    //             console.log('share thanh cong');
+    //         } else {
+    //             console.log('share khong thanh cong');
+    //         }
+    //     }
+    // );
 }
