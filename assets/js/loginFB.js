@@ -1,5 +1,5 @@
 // [1] Load lên các thành phần cần thiết
-window.fbAsyncInit = function() {
+window.fbAsyncInit = function () {
     FB.init({
         appId: '2041159069433896',
         cookie: true,
@@ -7,7 +7,7 @@ window.fbAsyncInit = function() {
         version: 'v2.11'
     });
     // Kiểm tra trạng thái hiện tại
-    FB.getLoginStatus(function(response) {
+    FB.getLoginStatus(function (response) {
         statusChangeCallback(response);
     });
 
@@ -33,7 +33,7 @@ function statusChangeCallback(response) {
 // [3] Yêu cầu đăng nhập FB
 function RequestLoginFB() {
     window.location =
-        'http://graph.facebook.com/oauth/authorize?client_id=2041159069433896&scope=public_profile,email,user_likes&redirect_uri=http://localhost:8888/estee/frame.step2.html';
+        'http://graph.facebook.com/oauth/authorize?client_id=2041159069433896&scope=public_profile,email,user_likes&redirect_uri=http://localhost:8888/estee/';
 }
 
 // [4] Hiển thị nút đăng nhập
@@ -46,7 +46,7 @@ function ShowLoginButton() {
 
 // [5] Chào mừng người dùng đã đăng nhập
 function ShowWelcome() {
-    FB.api('/me', function(response) {
+    FB.api('/me', function (response) {
         var name = response.name;
         var username = response.username;
         var id = response.id;
@@ -65,7 +65,7 @@ function ShowWelcome() {
 }
 
 function logoutFB() {
-    FB.logout(function(response) {
+    FB.logout(function (response) {
         // user is now logged out
         window.location.href = 'http://localhost:8888/esste/index.html';
 
@@ -73,7 +73,7 @@ function logoutFB() {
 }
 
 
-(function(d, s, id) {
+(function (d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s);

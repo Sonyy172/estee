@@ -58,7 +58,7 @@ function onChangeEvent() {
 }
 
 function silderZoom() {
-    var minsize = 350/$("#zoomImg").height();
+    var minsize = 350 / $("#zoomImg").height();
     var mySlider = $("#zoom-slider").slider({
         value: 1,
         step: 0.01,
@@ -269,7 +269,7 @@ function statusChangeCallback(response) {
 // [3] Yêu cầu đăng nhập FB
 function RequestLoginFB() {
     window.location =
-        'http://graph.facebook.com/oauth/authorize?client_id=' + appID + '&scope=public_profile,email,user_likes&redirect_uri=' + chooseLink + 'frame.step2.html';
+        'http://graph.facebook.com/oauth/authorize?client_id=' + appID + '&scope=public_profile,email,user_likes&redirect_uri=' + chooseLink;
 }
 
 // [4] Hiển thị nút đăng nhập
