@@ -40,7 +40,7 @@ function onChangeEvent() {
             processData: false,
             data: form_data,
             type: 'post',
-            success: function(res) {
+            success: function (res) {
                 console.log(res);
 
                 if (res == 'upload ok') {
@@ -82,23 +82,25 @@ function silderZoom() {
     mySlider.on('slideStop', changeImgScale);
     mySlider.on('touch', disableScroll);
 };
-function disableScroll(){
+
+function disableScroll() {
 
 }
-var _DRAGGGING_STARTED = 0;
-    var _LAST_MOUSEMOVE_POSITION = {
-        x: null,
-        y: null,
-    };
-    var _DIV_OFFSET = $('#image-container').offset();
-    var _CONTAINER_WIDTH = $("#image-container").outerWidth();
-    var _CONTAINER_HEIGHT = $("#image-container").outerHeight();
-    var _IMAGE_WIDTH;
-    var _IMAGE_HEIGHT;
-    var _IMAGE_LOADED = 0;
-    var _ZOOM = 1;
 
-function startDrag(){
+var _DRAGGGING_STARTED = 0;
+var _LAST_MOUSEMOVE_POSITION = {
+    x: null,
+    y: null,
+};
+var _DIV_OFFSET = $('#image-container').offset();
+var _CONTAINER_WIDTH = $("#image-container").outerWidth();
+var _CONTAINER_HEIGHT = $("#image-container").outerHeight();
+var _IMAGE_WIDTH;
+var _IMAGE_HEIGHT;
+var _IMAGE_LOADED = 0;
+var _ZOOM = 1;
+
+function startDrag() {
     $('.notice-drag').css('display', 'none');
     _DRAGGGING_STARTED = 1;
     dragAction();
@@ -106,7 +108,6 @@ function startDrag(){
 
 function dragAction() {
     $('.notice-drag').css('display', 'none');
-    
 
 
     // Check whether image is cached or wait for the image to load
@@ -114,7 +115,7 @@ function dragAction() {
     if ($('#zoomImg').get(0).complete) {
         ImageLoaded();
     } else {
-        $('#zoomImg').on('load', function() {
+        $('#zoomImg').on('load', function () {
             ImageLoaded();
         });
     }
@@ -127,7 +128,7 @@ function dragAction() {
         _IMAGE_LOADED = 1;
     }
 
-    $('#blank-frame').on('mousedown', function(event) {
+    $('#blank-frame').on('mousedown', function (event) {
         /* Image should be loaded before it can be dragged */
 
 
@@ -150,12 +151,12 @@ function dragAction() {
 
     });
 
-    $('#blank-frame').on('mouseup', function() {
+    $('#blank-frame').on('mouseup', function () {
         _DRAGGGING_STARTED = 0;
         $('.notice-drag').css('display', 'block');
     });
 
-    $('#blank-frame').on('mousemove', function(event) {
+    $('#blank-frame').on('mousemove', function (event) {
         var current_mouse_position = {
             x: event.pageX - _DIV_OFFSET.left,
             y: event.pageY - _DIV_OFFSET.top
@@ -204,7 +205,7 @@ function dragAction() {
 function saveCanvas2ImageOnServer() {
     console.log('save canvas');
 
-    html2canvas(document.getElementById('frame-and-image')).then(function(canvas) {
+    html2canvas(document.getElementById('frame-and-image')).then(function (canvas) {
         var image = canvas.toDataURL("image/png");
         var user_id = document.getElementById('user-id').innerHTML;
         console.log(user_id);
@@ -219,7 +220,7 @@ function saveCanvas2ImageOnServer() {
             processData: false,
             data: form_data,
             type: 'post',
-            success: function(res) {
+            success: function (res) {
                 if (res == 'save image ok') {
                     window.location.href = chooseLink + 'frame.step5.html';
                 }
@@ -230,7 +231,7 @@ function saveCanvas2ImageOnServer() {
 }
 
 // [1] Load lên các thành phần cần thiết
-window.fbAsyncInit = function() {
+window.fbAsyncInit = function () {
     FB.init({
         appId: appID,
         cookie: true,
@@ -238,7 +239,7 @@ window.fbAsyncInit = function() {
         version: 'v2.11'
     });
     // Kiểm tra trạng thái hiện tại
-    FB.getLoginStatus(function(response) {
+    FB.getLoginStatus(function (response) {
         statusChangeCallback(response);
     });
 
@@ -277,7 +278,7 @@ function ShowLoginButton() {
 
 // [5] Chào mừng người dùng đã đăng nhập
 function ShowWelcome() {
-    FB.api('/me', function(response) {
+    FB.api('/me', function (response) {
         var name = response.name;
         var username = response.username;
         var id = response.id;
@@ -303,19 +304,16 @@ function ShowWelcome() {
         img.src = link_effect_pic + 'original.png';
         // document.getElementById('zoomImg').src = link_effect_pic + 'original.png';
         document.getElementById('image-container').appendChild(img);
-        $("#zoomImg").one('load',function() {
-            // fire when image loads
+        $("#zoomImg").one('load', function () {// fire when image loads
             silderZoom();
         });
-
-
 
 
     });
 }
 
 function logoutFB() {
-    FB.logout(function(response) {
+    FB.logout(function (response) {
         // user is now logged out
         window.location.href = chooseLink + 'index.html';
 
@@ -323,7 +321,7 @@ function logoutFB() {
 }
 
 
-(function(d, s, id) {
+(function (d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s);
@@ -331,3 +329,9 @@ function logoutFB() {
     js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=" + appID;
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
+
+function changeImage(id) {
+    var bendedImageSrc = $("#" + id).attr("src");
+    $("#zoomImg").attr("src", bendedImageSrc);
+    console.log(bendedImageSrc);
+}
