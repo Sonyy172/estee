@@ -81,10 +81,7 @@ function silderZoom() {
     mySlider.on('slide', changeImgScale);
     mySlider.on('slideStop', changeImgScale);
 };
-
-function dragAction() {
-    $('.notice-drag').css('display', 'none');
-    var _DRAGGGING_STARTED = 0;
+var _DRAGGGING_STARTED = 0;
     var _LAST_MOUSEMOVE_POSITION = {
         x: null,
         y: null,
@@ -95,7 +92,17 @@ function dragAction() {
     var _IMAGE_WIDTH;
     var _IMAGE_HEIGHT;
     var _IMAGE_LOADED = 0;
-    var _ZOOM = 2;
+    var _ZOOM = 1;
+
+function startDrag(){
+    $('.notice-drag').css('display', 'none');
+    _DRAGGGING_STARTED = 1;
+    dragAction();
+}
+
+function dragAction() {
+    $('.notice-drag').css('display', 'none');
+    
 
 
     // Check whether image is cached or wait for the image to load
@@ -141,6 +148,7 @@ function dragAction() {
 
     $('#blank-frame').on('mouseup', function() {
         _DRAGGGING_STARTED = 0;
+        $('.notice-drag').css('display', 'block');
     });
 
     $('#blank-frame').on('mousemove', function(event) {
@@ -188,15 +196,6 @@ function dragAction() {
         }
     });
 }
-
-function disappearNoticeDrag() {
-
-}
-
-$(document).ready(function() {
-    // dragAction();
-
-});
 
 function saveCanvas2ImageOnServer() {
     console.log('save canvas');
