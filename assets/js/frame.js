@@ -334,7 +334,11 @@ function logoutFB() {
 }(document, 'script', 'facebook-jssdk'));
 
 function changeImage(id) {
-    var bendedImageSrc = $("#" + id).attr("src");
-    $("#zoomImg").attr("src", bendedImageSrc);
-    console.log(bendedImageSrc);
+    var user_id = document.getElementById('user-id').innerHTML;
+    if (id == 'original') {
+        $("#zoomImg").attr("src", './photos/' + user_id + '/original.png');
+    } else {
+        var bendedImageSrc = $("#" + id).attr("src");
+        $("#zoomImg").attr("src", bendedImageSrc);
+    }
 }
