@@ -2,7 +2,7 @@ var appVotingBeauty = '2041159069433896';
 var appABTech = '152276092150806';
 var appID = appVotingBeauty;
 
-var linkLocal = 'http://10.176.253.119:8888/estee/';
+var linkLocal = 'http://estee.test:8888/estee/';
 var linkABTech = 'http://voting.abtech.vn/';
 var chooseLink = '';
 
@@ -40,7 +40,7 @@ function onChangeEvent() {
             processData: false,
             data: form_data,
             type: 'post',
-            success: function (res) {
+            success: function(res) {
                 console.log('Response from upload.php');
                 console.log(res);
 
@@ -116,7 +116,7 @@ function dragAction() {
     if ($('#zoomImg').get(0).complete) {
         ImageLoaded();
     } else {
-        $('#zoomImg').on('load', function () {
+        $('#zoomImg').on('load', function() {
             ImageLoaded();
         });
     }
@@ -129,7 +129,7 @@ function dragAction() {
         _IMAGE_LOADED = 1;
     }
 
-    $('#blank-frame').on('mousedown', function (event) {
+    $('#blank-frame').on('mousedown', function(event) {
         /* Image should be loaded before it can be dragged */
 
 
@@ -152,12 +152,12 @@ function dragAction() {
 
     });
 
-    $('#blank-frame').on('mouseup', function () {
+    $('#blank-frame').on('mouseup', function() {
         _DRAGGGING_STARTED = 0;
         $('.notice-drag').css('display', 'block');
     });
 
-    $('#blank-frame').on('mousemove', function (event) {
+    $('#blank-frame').on('mousemove', function(event) {
         var current_mouse_position = {
             x: event.pageX - _DIV_OFFSET.left,
             y: event.pageY - _DIV_OFFSET.top
@@ -206,7 +206,7 @@ function dragAction() {
 function saveCanvas2ImageOnServer() {
     console.log('save canvas');
 
-    html2canvas(document.getElementById('final')).then(function (canvas) {
+    html2canvas(document.getElementById('final')).then(function(canvas) {
         var image = canvas.toDataURL("image/png");
         var user_id = document.getElementById('user-id').innerHTML;
         console.log(user_id);
@@ -221,7 +221,7 @@ function saveCanvas2ImageOnServer() {
             processData: false,
             data: form_data,
             type: 'post',
-            success: function (res) {
+            success: function(res) {
                 console.log(res);
                 if (res == 'save image ok') {
                     window.top.location.href = chooseLink + 'index5.html#bai-du-thi';
