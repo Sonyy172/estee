@@ -2,7 +2,7 @@ var appVotingBeauty = '2041159069433896';
 var appABTech = '152276092150806';
 var appID = appVotingBeauty;
 
-var linkLocal = 'http://localhost:8888/estee/';
+var linkLocal = 'http://10.176.253.119:8888/estee/';
 var linkABTech = 'http://voting.abtech.vn/';
 var chooseLink = '';
 
