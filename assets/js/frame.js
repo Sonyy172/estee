@@ -58,7 +58,7 @@ function onChangeEvent() {
 }
 
 function silderZoom() {
-    var minsize = 350/$("#zoomImg").height();
+    var minsize = 350 / $("#zoomImg").height();
     var mySlider = $("#zoom-slider").slider({
         value: 1,
         step: 0.01,
@@ -207,7 +207,7 @@ function dragAction() {
 function saveCanvas2ImageOnServer() {
     console.log('save canvas');
 
-    html2canvas(document.getElementById('frame-and-image')).then(function (canvas) {
+    html2canvas(document.getElementById('final')).then(function (canvas) {
         var image = canvas.toDataURL("image/png");
         var user_id = document.getElementById('user-id').innerHTML;
         console.log(user_id);
@@ -344,23 +344,19 @@ function changeImage(id) {
 }
 
 function sharefbimage() {
-    FB.init({appId: appID, status: true, cookie: true});
-    FB.ui(
-        {
-            method: `share`,
-            name: 'Facebook Dialogs',
-            href: $(location).attr('href'),
-            link: 'https://developers.facebook.com/docs/dialogs/',
-            picture: 'your image url',
-            caption: 'Ishelf Book',
-            description: 'your description'
+    FB.ui({
+            method: 'share_open_graph',
+            action_type: 'og.shares',
+            action_properties: JSON.stringify({
+                object: {
+                    'og:url': 'voting.abtech.vn',
+                    'og:title': 'Estee Th',
+                    'og:description': 'saostar the thao',
+                    'og:image': ''
+                }
+            })
         },
         function (response) {
-            if (response && response.post_id) {
-                alert('success');
-            } else {
-                alert('error');
-            }
-        }
-    );
+            // Action after response
+        });
 }
