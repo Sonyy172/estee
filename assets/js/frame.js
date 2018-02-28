@@ -1,13 +1,12 @@
 var appVotingBeauty = '2041159069433896';
 var appABTech = '152276092150806';
-
-
-var server = 'local';
 var appID = appVotingBeauty;
 
 var linkLocal = 'http://localhost:8888/estee/';
 var linkABTech = 'http://voting.abtech.vn/';
 var chooseLink = '';
+
+var server = 'local';
 
 if (server == 'local') {
     chooseLink = linkLocal;
@@ -225,7 +224,7 @@ function saveCanvas2ImageOnServer() {
             success: function (res) {
                 console.log(res);
                 if (res == 'save image ok') {
-                    window.location.href = chooseLink + 'index5.html';
+                    window.location.href = chooseLink + 'frame.step5.html';
                 }
             }
         });
@@ -233,105 +232,6 @@ function saveCanvas2ImageOnServer() {
 
 }
 
-// [1] Load lên các thành phần cần thiết
-window.fbAsyncInit = function () {
-    FB.init({
-        appId: appID,
-        cookie: true,
-        xfbml: true,
-        version: 'v2.11'
-    });
-    // Kiểm tra trạng thái hiện tại
-    FB.getLoginStatus(function (response) {
-        statusChangeCallback(response);
-    });
-
-};
-
-// [2] Xử lý trạng thái đăng nhập
-function statusChangeCallback(response) {
-    // Người dùng đã đăng nhập FB và đã đăng nhập vào ứng dụng
-    if (response.status === 'connected') {
-        ShowWelcome();
-        //window.location.href = 'http://thathinh.texaschicken.vn/choose.html';
-    }
-    // Người dùng đã đăng nhập FB nhưng chưa đăng nhập ứng dụng
-    else if (response.status === 'not_authorized') {
-        ShowLoginButton();
-    }
-    // Người dùng chưa đăng nhập FB
-    else {
-        ShowLoginButton();
-    }
-}
-
-// [3] Yêu cầu đăng nhập FB
-function RequestLoginFB() {
-    window.location =
-        'http://graph.facebook.com/oauth/authorize?client_id=' + appID + '&scope=public_profile,email,user_likes&redirect_uri=' + chooseLink + 'index2.html';
-}
-
-// [4] Hiển thị nút đăng nhập
-function ShowLoginButton() {
-    // document.getElementById('btb').setAttribute('style', 'display:block');
-    // document.getElementById('lbl').setAttribute('style', 'display:none');
-    console.log('chua dang nhap');
-
-}
-
-// [5] Chào mừng người dùng đã đăng nhập
-function ShowWelcome() {
-    FB.api('/me', function (response) {
-        var name = response.name;
-        var username = response.username;
-        var id = response.id;
-
-        var token = FB.getAuthResponse().accessToken;
-        var public_profile_link = "https://www.facebook.com/app_scoped_user_id/" + id;
-        var picture = "http://graph.facebook.com/" + id + "/picture?type=large";
-
-        document.getElementById('user-id').innerHTML = id;
-        document.getElementById('user-id').value = id;
-        document.getElementById('name-user').innerHTML = name;
-        document.getElementById('picture-user').src = picture;
-
-
-        var link_effect_pic = './photos/' + id + '/';
-        document.getElementById('fresh').src = link_effect_pic + 'fresh.png';
-        document.getElementById('vintage').src = link_effect_pic + 'vintage.png';
-        document.getElementById('summer').src = link_effect_pic + 'summer.png';
-        document.getElementById('winter').src = link_effect_pic + 'winter.png';
-
-        var img = document.createElement("IMG");
-        img.id = "zoomImg";
-        img.src = link_effect_pic + 'original.png';
-        // document.getElementById('zoomImg').src = link_effect_pic + 'original.png';
-        document.getElementById('image-container').appendChild(img);
-        $("#zoomImg").one('load', function () {// fire when image loads
-            silderZoom();
-        });
-
-
-    });
-}
-
-function logoutFB() {
-    FB.logout(function (response) {
-        // user is now logged out
-        window.location.href = chooseLink + 'index.html';
-
-    });
-}
-
-
-(function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=" + appID;
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
 
 function changeImage(id) {
     var user_id = document.getElementById('user-id').innerHTML;
@@ -344,15 +244,17 @@ function changeImage(id) {
 }
 
 function sharefbimage() {
+    var image = 'https://znews-photo-td.zadn.vn/w1024/Uploaded/znguhv/2017_06_12/zing_meo_larry_4.jpg';
+
     FB.ui({
             method: 'share_open_graph',
             action_type: 'og.shares',
             action_properties: JSON.stringify({
                 object: {
-                    'og:url': 'voting.abtech.vn',
-                    'og:title': 'Estee Th',
-                    'og:description': 'saostar the thao',
-                    'og:image': ''
+                    'og:url': 'https://saostar.vn/the-thao/bong-da/bui-tien-dung-sinh-nhat-tuoi-21-sau-loi-xin-loi-la-mua-giong-2288453.html',
+                    'og:title': 'Estée Lauder',
+                    'og:description': '#iLOVEANR #PowerOfNight',
+                    'og:image': image
                 }
             })
         },

@@ -687,6 +687,43 @@
 <!--</script>-->
 <section class="probootstrap_section " id="bai-du-thi">
     <div id="fb-root"></div>
+    <script>
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=" + '2041159069433896';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        function sharefbimage() {
+            // var user_id = document.getElementById('user-id').innerHTML;
+            var user_id = '1787283534908724';
+            var image = 'https://znews-photo-td.zadn.vn/w1024/Uploaded/znguhv/2017_06_12/zing_meo_larry_4.jpg';
+
+
+            // var image = 'http://localhost:8888/estee/photos/1787283534908724/final.png';
+
+            FB.ui({
+                    method: 'share_open_graph',
+                    action_type: 'og.shares',
+                    action_properties: JSON.stringify({
+                        object: {
+                            'og:url': 'https://saostar.vn/the-thao/bong-da/bui-tien-dung-sinh-nhat-tuoi-21-sau-loi-xin-loi-la-mua-giong-2288453.html',
+                            'og:title': 'Estée Lauder',
+                            'og:description': '#iLOVEANR #PowerOfNight',
+                            'og:image': image
+                        }
+                    })
+                },
+                function (response) {
+                    // Action after response
+                });
+        }
+    </script>
+    <!--<div id="fb-root"></div>-->
     <div class="row text-center  probootstrap-animate" style="font-family: VNF;">
         <div class="col-md-12">
             <h2 class="  probootstrap-section-heading " style="color: #ffffff;margin-top: 25px;">nộp bài dự thi</h2>
@@ -776,7 +813,7 @@
             <div style="">
                 <!--<img src="assets/images/video.png" class=" video-image img-fluid" alt="Responsive image" style="">-->
                 <video autoplay="autoplay" class="video-image">
-                    <source src="assets/video/video-gioi-thieu.mp4" type="video/wmv"/>
+                    <source src="assets/video/video-gioi-thieu.mp4" type="video/mp4"/>
                 </video>
             </div>
         </div>
@@ -1071,7 +1108,7 @@
 <script src="assets/js/select2.min.js"></script>
 
 <script src="assets/js/main.js"></script>
-<script src="assets/js/frame.js"></script>
+<!--<script src="assets/js/frame.js"></script>-->
 
 </body>
 
