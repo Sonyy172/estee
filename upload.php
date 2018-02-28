@@ -16,7 +16,7 @@ if (isset($_POST) && isset($_FILES['file'])) {
     $duoi = $duoi[(count($duoi) - 1)];//lấy ra đuôi file
     $duoi = strtolower($duoi);
     //Kiểm tra xem có phải file ảnh không
-    if ($duoi === 'jpg' || $duoi === 'png') {
+    if ($duoi === 'jpg' || $duoi === 'png' || $duoi === 'jpeg') {
         //tiến hành upload
         if (move_uploaded_file($_FILES['file']['tmp_name'], $target_dir . '/original.' . $duoi)) {
             //Nếu thành công
