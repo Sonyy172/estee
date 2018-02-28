@@ -224,7 +224,7 @@ function saveCanvas2ImageOnServer() {
             success: function (res) {
                 console.log(res);
                 if (res == 'save image ok') {
-                    window.location.href = chooseLink + 'frame.step5.html';
+                    window.top.location.href = chooseLink + 'index5.html#bai-du-thi';
                 }
             }
         });
