@@ -687,18 +687,36 @@
 <!--</script>-->
 <section class="probootstrap_section " id="bai-du-thi">
     <div id="fb-root"></div>
-    <div class="row text-center  probootstrap-animate" style="">
+    <div class="row text-center  probootstrap-animate" style="font-family: VNF;">
         <div class="col-md-12">
             <h2 class="  probootstrap-section-heading " style="color: #ffffff;margin-top: 25px;">nộp bài dự thi</h2>
         </div>
-        <div class="step1" style="position: relative; margin: 0 auto;">
-            <img src="assets/images/b1-bg.png" alt="bg step1" class="img-fluid" style="width: 70%">
-            <a style="position: absolute;top: 50%; left: 50%;transform: translate(-50%, -50%);"
-               onclick="RequestLoginFB()">
-                <img src="assets/images/login-facebook.svg" alt="bg step1" class="img-fluid">
-            </a>
+        <div class="step6" style="position: relative; margin: 0 auto;">
+            <img src="assets/images/step2/bgst2.png" alt="bg step1" class="img-fluid">
+            <div style="position: absolute;top: calc(50% + 10px); left: 50%;transform: translate(-50%, -50%);    ">
+                <img src="assets/images/step6/success.png" alt="bg step6" class="img-fluid" style="margin-bottom: 40px">
+
+                <img src="assets/images/step6/textshare.png" alt="bg step6" class="img-fluid"
+                     style="margin-bottom: 20px">
+
+
+                <a href="" onclick="sharefbimage()"><img src="assets/images/step6/share.png" alt="bg step6"
+                                                         class="img-fluid"></a>
+            </div>
         </div>
-        <p id="user-id" style="display:none;"></p>
+
+        <div class="probootstrap-author" style="margin: 0 auto; font-family: VNF; width: 100%;">
+
+            <img src="" style="width: 5%; vertical-align: sub; " class="rounded-circle" id="picture-user">
+            <div style="display: inline-block; padding-left: 10px; text-align: left;">
+                <div class="probootstrap-name" style="color: white">Chào <span id="name-user"></span></div>
+                <div class="probootstrap-title" style="color: #8998ff" onclick="logoutFB()">Thoát</div>
+            </div>
+        </div>
+
+        <p id="user-id" style="display:none"></p>
+
+
     </div>
 </section>
 

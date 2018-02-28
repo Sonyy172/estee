@@ -452,7 +452,7 @@ img {
 
 .notice-drag {
     position: relative;
-    top: -123px;
+    top: 70%;
     z-index: 5;
     left: 0px;
 }
@@ -588,4 +588,12 @@ img {
         text-align: center;
 
     }
+}
+
+#final {
+    width: 320px;
+    height: 350px;
+    /*margin: 0 auto;*/
+    position: absolute;
+    left: 25%;
 }
