@@ -45,7 +45,7 @@ function onChangeEvent() {
                 console.log(res);
 
                 if (res == 'upload ok') {
-                    window.location.href = chooseLink + 'frame.step4.html';
+                    window.location.href = chooseLink + 'index3.html#bai-du-thi';
 
                 }
             }
@@ -224,7 +224,7 @@ function saveCanvas2ImageOnServer() {
             success: function(res) {
                 console.log(res);
                 if (res == 'save image ok') {
-                    window.top.location.href = chooseLink + 'index5.html#bai-du-thi';
+                    window.top.location.href = chooseLink + 'index4.html#bai-du-thi';
                 }
             }
         });

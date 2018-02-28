@@ -654,20 +654,53 @@
         <script>
             var appVotingBeauty = '2041159069433896';
             var appABTech = '152276092150806';
+
+
+            var server = 'local';
             var appID = appVotingBeauty;
 
             var linkLocal = 'http://estee.test:8888/estee/';
             var linkABTech = 'http://voting.abtech.vn/';
             var chooseLink = '';
 
-            var server = 'local';
-
             if (server == 'local') {
                 chooseLink = linkLocal;
             } else {
                 chooseLink = linkABTech;
             }
+            // (function (d, s, id) {
+            //     var js, fjs = d.getElementsByTagName(s)[0];
+            //     if (d.getElementById(id)) return;
+            //     js = d.createElement(s);
+            //     js.id = id;
+            //     js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=" + '2041159069433896';
+            //     fjs.parentNode.insertBefore(js, fjs);
+            // }(document, 'script', 'facebook-jssdk'));
 
+            function sharefbimage() {
+                // var user_id = document.getElementById('user-id').innerHTML;
+                var user_id = '1787283534908724';
+                var image = 'https://znews-photo-td.zadn.vn/w1024/Uploaded/znguhv/2017_06_12/zing_meo_larry_4.jpg';
+
+
+                // var image = 'http://localhost:8888/estee/photos/1787283534908724/final.png';
+
+                FB.ui({
+                        method: 'share_open_graph',
+                        action_type: 'og.shares',
+                        action_properties: JSON.stringify({
+                            object: {
+                                'og:url': 'https://saostar.vn/the-thao/bong-da/bui-tien-dung-sinh-nhat-tuoi-21-sau-loi-xin-loi-la-mua-giong-2288453.html',
+                                'og:title': 'Estée Lauder',
+                                'og:description': '#iLOVEANR #PowerOfNight',
+                                'og:image': image
+                            }
+                        })
+                    },
+                    function(response) {
+                        // Action after response
+                    });
+            }
 
             // [1] Load lên các thành phần cần thiết
             window.fbAsyncInit = function() {
@@ -719,7 +752,7 @@
             function ShowWelcome() {
                 FB.api('/me', function(response) {
                     var name = response.name;
-                    // var username = response.username;
+                    var username = response.username;
                     var id = response.id;
 
                     var token = FB.getAuthResponse().accessToken;
@@ -727,7 +760,7 @@
                     var picture = "http://graph.facebook.com/" + id + "/picture?type=large";
 
                     document.getElementById('user-id').innerHTML = id;
-                    document.getElementById('user_id').value = id;
+                    // document.getElementById('user-id').value = id;
                     document.getElementById('name-user').innerHTML = name;
                     document.getElementById('picture-user').src = picture;
 
@@ -737,7 +770,7 @@
                     // document.getElementById('vintage').src = link_effect_pic + 'vintage.png';
                     // document.getElementById('summer').src = link_effect_pic + 'summer.png';
                     // document.getElementById('winter').src = link_effect_pic + 'winter.png';
-                    //
+
                     // var img = document.createElement("IMG");
                     // img.id = "zoomImg";
                     // img.src = link_effect_pic + 'original.png';
@@ -758,57 +791,27 @@
 
                 });
             }
-
-
-            (function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=" + appID;
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
         </script>
         <div class="row text-center  probootstrap-animate" style="font-family: VNF;">
             <div class="col-md-12">
                 <h2 class="  probootstrap-section-heading " style="color: #ffffff;margin-top: 25px;">nộp bài dự thi</h2>
             </div>
-            <form class="step2" style="position: relative; margin: 0 auto;">
-                <img src="assets/images/step2/bgst2.png" alt="bg step1" class="img-fluid" style="width: 100%">
-                <div style="position: absolute;top: calc(50% + 10px); left: 50%;transform: translate(-50%, -50%); display: none;" id="loading">
-                    <img src="assets/images/loading.gif" style="width: 40%" alt="" loop=infinite>
+            <div class="step6" style="position: relative; margin: 0 auto;">
+                <img src="assets/images/step2/bgst2.png" alt="bg step1" class="img-fluid">
+                <div style="position: absolute;top: calc(50% + 10px); left: 50%;transform: translate(-50%, -50%);    ">
+                    <img src="assets/images/step6/success.png" alt="bg step6" class="img-fluid" style="margin-bottom: 40px">
+                    <img src="assets/images/step6/textshare.png" alt="bg step6" class="img-fluid" style="margin-bottom: 20px">
+                    <a href="" onclick="sharefbimage()"><img src="assets/images/step6/share.png" alt="bg step6" class="img-fluid"></a>
                 </div>
-                <div style="position: absolute;top: calc(50% + 10px); left: 50%;transform: translate(-50%, -50%);    " class="step2-content">
-                    <div style="display: block;margin: 0 auto; margin-bottom: 20px; position: relative;">
-                        <img src="assets/images/step2/camera.png" alt="bg step1" class="img-fluid" style="width: 15%">
-                        <div style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; opacity: 0">
-                            <input type="file" name="fileChup" accept="image/*" capture="camera" style="height: 40px">
-                        </div>
-                    </div>
-                    <img src="assets/images/step2/newimage.png" alt="bg step1" class="img-fluid" style="margin-bottom: 20px;">
-                    <div style="display: block;margin: 0 auto; margin-bottom: 40px; position: relative;">
-                        <img src="assets/images/step2/dl.png" alt="bg step1" class="img-fluid">
-                        <div style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; opacity: 0">
-                            <form action="" method="POST" role="form">
-                                <input type="text" name="user_id" id="user_id" style="height: 0px; display: none;">
-                                <input type="file" onchange="onChangeEvent()" name="fileToUpload" id="fileToUpload" accept="image/*" style="height: 40px">
-                            </form>
-                        </div>
-                    </div>
-                    <img src="assets/images/step2/hd.png" alt="bg step1" class="img-fluid">
-                </div>
-            </form>
-            <div class="probootstrap-author" style="margin: 0 auto; width: 100%;">
-                <img src="" style="width: 5%; vertical-align: sub;" id="picture-user" class="rounded-circle">
+            </div>
+            <div class="probootstrap-author" style="margin: 0 auto; font-family: VNF; width: 100%;">
+                <img src="" style="width: 5%; vertical-align: sub; " class="rounded-circle" id="picture-user">
                 <div style="display: inline-block; padding-left: 10px; text-align: left;">
-                    <div class="probootstrap-name" style="color: white">Chào
-                        <span id="name-user"></span>
-                    </div>
+                    <div class="probootstrap-name" style="color: white">Chào <span id="name-user"></span></div>
                     <div class="probootstrap-title" style="color: #8998ff" onclick="logoutFB()">Thoát</div>
                 </div>
             </div>
-            <p id="user-id" style="display:none;"></p>
-
+            <p id="user-id" style="display:none"></p>
         </div>
 
     </section>
