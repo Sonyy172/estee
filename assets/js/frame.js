@@ -243,22 +243,23 @@ function changeImage(id) {
     }
 }
 
-function sharefbimage() {
-    var image = 'https://znews-photo-td.zadn.vn/w1024/Uploaded/znguhv/2017_06_12/zing_meo_larry_4.jpg';
-
-    FB.ui({
-            method: 'share_open_graph',
-            action_type: 'og.shares',
-            action_properties: JSON.stringify({
-                object: {
-                    'og:url': 'https://saostar.vn/the-thao/bong-da/bui-tien-dung-sinh-nhat-tuoi-21-sau-loi-xin-loi-la-mua-giong-2288453.html',
-                    'og:title': 'Estée Lauder',
-                    'og:description': '#iLOVEANR #PowerOfNight',
-                    'og:image': image
-                }
-            })
-        },
-        function (response) {
-            // Action after response
-        });
-}
+//
+// function sharefbimage() {
+//     var image = 'https://znews-photo-td.zadn.vn/w1024/Uploaded/znguhv/2017_06_12/zing_meo_larry_4.jpg';
+//
+//     FB.ui({
+//             method: 'share_open_graph',
+//             action_type: 'og.shares',
+//             action_properties: JSON.stringify({
+//                 object: {
+//                     'og:url': 'https://saostar.vn/the-thao/bong-da/bui-tien-dung-sinh-nhat-tuoi-21-sau-loi-xin-loi-la-mua-giong-2288453.html',
+//                     'og:title': 'Estée Lauder',
+//                     'og:description': '#iLOVEANR #PowerOfNight',
+//                     'og:image': image
+//                 }
+//             })
+//         },
+//         function (response) {
+//             // Action after response
+//         });
+// }

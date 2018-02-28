@@ -689,23 +689,23 @@
     <div id="fb-root"></div>
     <script>
 
-        var appVotingBeauty = '2041159069433896';
-        var appABTech = '152276092150806';
-        var appID = appVotingBeauty;
-
-        var linkLocal = 'http://localhost:8888/estee/';
-        var linkABTech = 'http://voting.abtech.vn/';
-        var chooseLink = '';
-
-        var server = 'local';
-
-        if (server == 'local') {
-            chooseLink = linkLocal;
-        } else {
-            chooseLink = linkABTech;
-        }
-
-
+        // var appVotingBeauty = '2041159069433896';
+        // var appABTech = '152276092150806';
+        // var appID = appVotingBeauty;
+        //
+        // var linkLocal = 'http://localhost:8888/estee/';
+        // var linkABTech = 'http://voting.abtech.vn/';
+        // var chooseLink = '';
+        //
+        // var server = 'local';
+        //
+        // if (server == 'local') {
+        //     chooseLink = linkLocal;
+        // } else {
+        //     chooseLink = linkABTech;
+        // }
+        //
+        //
         // // [1] Load lên các thành phần cần thiết
         // window.fbAsyncInit = function () {
         //     FB.init({
@@ -821,12 +821,13 @@
                             'og:url': 'https://saostar.vn/the-thao/bong-da/bui-tien-dung-sinh-nhat-tuoi-21-sau-loi-xin-loi-la-mua-giong-2288453.html',
                             'og:title': 'Estée Lauder',
                             'og:description': '#iLOVEANR #PowerOfNight',
-                            'og:image': image
+                            'og:image': image,
                         }
                     })
                 },
                 function (response) {
                     // Action after response
+                    console.log(response);
                 });
         }
     </script>
@@ -849,16 +850,16 @@
             </div>
         </div>
 
-        <div class="probootstrap-author" style="margin: 0 auto; font-family: VNF; width: 100%;">
+        <!--<div class="probootstrap-author" style="margin: 0 auto; font-family: VNF; width: 100%;">-->
 
-            <img src="" style="width: 5%; vertical-align: sub; " class="rounded-circle" id="picture-user">
-            <div style="display: inline-block; padding-left: 10px; text-align: left;">
-                <div class="probootstrap-name" style="color: white">Chào <span id="name-user"></span></div>
-                <div class="probootstrap-title" style="color: #8998ff" onclick="logoutFB()">Thoát</div>
-            </div>
-        </div>
+        <!--<img src="" style="width: 5%; vertical-align: sub; " class="rounded-circle" id="picture-user">-->
+        <!--<div style="display: inline-block; padding-left: 10px; text-align: left;">-->
+        <!--<div class="probootstrap-name" style="color: white">Chào <span id="name-user"></span></div>-->
+        <!--<div class="probootstrap-title" style="color: #8998ff" onclick="logoutFB()">Thoát</div>-->
+        <!--</div>-->
+        <!--</div>-->
 
-        <p id="user-id" style="display:none"></p>
+        <!--<p id="user-id" style="display:none"></p>-->
 
 
     </div>
